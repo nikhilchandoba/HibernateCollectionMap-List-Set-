@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+  
+ <hibernate-mapping>  
+  <class name="listmap.Employee" table="emp1">  
+    <id name="id">  
+     <generator class="assigned"></generator>  
+    </id>  
+            
+    <property name="empNa"></property>  
+    <list name="subemp" table="semp">
+    <key column="eid"></key>
+    <index column="type"></index>
+    <element column="subemp1" type="string"></element>
+    </list>
+    
+            
+  </class>  
+            
+ </hibernate-mapping>  
